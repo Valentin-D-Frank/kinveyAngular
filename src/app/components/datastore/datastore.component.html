@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1>Almacen de datos <small>Colección de libros</small></h1>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>ISBN</th>
+            <th>Reseña</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td><input type="checkbox" [checked]="book.selected" (change)="book.selected = !book.selected"/></td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.review}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="clearfix">
+      <div class="pull-right">
+        <button type="button" class="btn btn-success" (click)="create()">Crear</button>
+        <button type="button" class="btn btn-default" (click)="update()">Actualizar</button>
+        <button type="button" class="btn btn-danger" (click)="remove()">Eliminar</button>
+        <button type="button" class="btn btn-default" (click)="pull()">Obtener cambios</button>
+        <button type="button" class="btn btn-default" (click)="push()">Enviar cambios</button>
+        <button type="button" class="btn btn-default" (click)="clearSync()">Sincronizar</button>
+      </div>
+    </div>
+  </div>
+</div>

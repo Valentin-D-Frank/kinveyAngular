@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1>Colección de archivos</h1>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nombre archivo</th>
+            <th>Tipo MIME</th>
+            <th>¿Público?</th>
+            <th>Enlace de descarga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of files">
+            <td><input type="checkbox" [checked]="file.selected" (change)="file.selected = !file.selected"/></td>
+            <td>{{file._filename}}</td>
+            <td>{{file.mimeType}}</td>
+            <td>{{file._public === true ? 'Sí' : 'No'}}</td>
+            <td><a target="_blank" href="{{file._downloadURL}}">Enlace URL</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="clearfix">
+    <div class="pull-right">
+      <button type="button" class="btn btn-default" (click)="reload()">Recargar</button>
+      <button type="button" class="btn btn-success" (click)="upload()">Subir</button>
+      <button type="button" class="btn btn-danger" (click)="remove()">Remover</button>
+    </div>
+  </div>
+  </div>
+</div>

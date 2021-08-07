@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Libros MAX</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <link rel="shortcut icon" type="image/jpg" href="/libro.ico"/>
+    <link rel="stylesheet" href="https://npmcdn.com/sweetalert2@4.0.15/dist/sweetalert2.min.css">
+
+    <script src="https://npmcdn.com/sweetalert2@4.0.15/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="node_modules/todc-bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/todc-bootstrap/dist/css/todc-bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/todc-bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Cargando contenido aquí...</my-app>
+  </body>
+</html>
